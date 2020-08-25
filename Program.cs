@@ -37,6 +37,28 @@ namespace HelloWorld
                 Console.WriteLine("Say Uncle!");
                 input = Console.ReadLine();
             }
+            PrintNumto255(100);
+            Console.WriteLine(PrintNumto255(100));
         }
+
+        static int PrintNumto255(int num)
+        {
+            int sum = 0;
+            for (int i = num; i <= 255; i++)
+            {
+                Console.WriteLine(i);
+                sum += i;
+            }
+            if (sum == 100)
+            {
+                Console.WriteLine("100 here");
+                return 0;
+            }
+            else
+            {
+                return sum;
+            }
+        }
+
     }
 }
